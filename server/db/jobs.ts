@@ -1,6 +1,7 @@
 import db from './connection'
 import { JobData, Job } from '../../models/jobs'
 
+//manager's page
 export async function getJobs() {
   const jobs = await db('jobs')
   return jobs as Job[]
