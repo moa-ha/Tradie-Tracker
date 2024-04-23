@@ -16,3 +16,8 @@ export async function getJobById(id: number) {
 export async function deleteJob(id: number) {
   await request.delete(`${rootUrl}/manager/${id}`)
 }
+
+export async function editJobById(input: Job) {
+  const id = input.id
+  await request.patch(`${rootUrl}/manager/${id}`).send(input)
+}
