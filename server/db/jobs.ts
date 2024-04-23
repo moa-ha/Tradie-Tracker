@@ -14,3 +14,7 @@ export async function getJobById(id: number) {
 export async function delJob(id: number) {
   await db('jobs').where({ id }).del()
 }
+
+export async function editJob(data: Job) {
+  return await db('jobs').where('id', data.id).update(data)
+}

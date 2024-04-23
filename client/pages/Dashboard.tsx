@@ -31,8 +31,8 @@ function Dashboard() {
                 <div className="location">{job.location || 'Address'}</div>
                 <ToggleButton job={job} />
                 <div className="edit">
-                  <Link to={`/jobs/manager/${job.id}`}>
-                    <button className="edit-job-btn">Edit job</button>
+                  <Link to={`/manager/${job.id}`}>
+                    <button className="edit-job-btn">Edit</button>
                   </Link>
                 </div>
                 <Assign id={job.id} />

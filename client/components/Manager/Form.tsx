@@ -21,6 +21,7 @@ function Form(props: Props) {
     complete: data.complete,
     quotation: data.quotation,
     manhour: data.manhour,
+    review: data.review,
     employee_id: data.employee_id,
     client_id: data.client_id,
     manager_id: data.manager_id,
@@ -31,7 +32,7 @@ function Form(props: Props) {
   function handleClick(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     mutation.mutate(formState)
-    navigate('/jobs/manager')
+    navigate('/manager')
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
