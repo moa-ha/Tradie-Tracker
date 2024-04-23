@@ -45,7 +45,6 @@ function Form(props: Props) {
       <form onSubmit={handleClick}>
         Job Title:
         <input
-          id="title"
           onChange={handleChange}
           value={formState.title}
           type="text"
