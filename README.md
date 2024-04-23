@@ -1,36 +1,38 @@
-# Boilerplate: Fullstack with Sass
+### My-App
 
-## Setup
+Website for managers to manage schedule effectively for their employees by visualized location information.
+This idea was goup project at bootcamp and I took a front-end lead.
 
-### What's included
+## Role
 
-This repo includes:
+* Front-end routing
+* Component management
+* Naming functions 
+(photo)
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* frontend routing via react-router
-* an auth0 setup waiting to be configured
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Vitest and testing library
-* configuration for server-side debugging in VS Code
-* configuration for preprocessing css with tailwind support
+Demo: http://... (after deployment)
 
-### Installation
+## Goal
 
-#### **From the Github UI**
+Use backend and frontend routes to save and filter data.
 
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
+## Skill
 
-#### **From the command line**
+* HTML
+* CSS
+* JavaScript
+* Auth0
+* Knex
 
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
+## Advanced Feature
 
-You can find the server running on [http://localhost:3000](http://localhost:3000) and the client running on [http://localhost:5173](http://localhost:5173).
+Google map api implementation
 
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
+(photo)
+
+(code)
+
+## To be improved
+
+Media query screen
+Employee page functions to implement
