@@ -96,7 +96,7 @@ function Form(props: Props) {
           value={formState.quotation}
           type="number"
           name="quotation"
-          // placeholder={data.quotation}
+          placeholder={String(data.quotation)}
         />
         <br></br>
         <button type="submit">save</button>
