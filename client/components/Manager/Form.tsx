@@ -90,13 +90,13 @@ function Form(props: Props) {
           placeholder={data.description}
         />
         <br></br>
-        Price:
+        Quotation:
         <input
           onChange={handleChange}
           value={formState.quotation}
           type="number"
-          name="price"
-          // placeholder={data.price}
+          name="quotation"
+          // placeholder={data.quotation}
         />
         <br></br>
         <button type="submit">save</button>

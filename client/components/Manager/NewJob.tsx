@@ -10,8 +10,8 @@ function NewJob() {
     date: '',
     time: '',
     complete: false,
-    price: 0,
-    worked_hours: 0,
+    quotation: 0,
+    manhour: 0,
     review: '',
     employee_id: 1,
     client_id: 1,
@@ -78,11 +78,11 @@ function NewJob() {
         </label>
         <br></br>
         <label>
-          Price:
+          Quotation:
           <input
-            name="price"
+            name="quotation"
             type="text"
-            value={formState.price}
+            value={formState.quotation}
             onChange={handleChange}
             placeholder="e.g ---"
           ></input>
