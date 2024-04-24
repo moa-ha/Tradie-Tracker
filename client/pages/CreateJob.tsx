@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import NewClient from '../components/Manager/NewClient'
 import OccurringClient from '../components/Manager/OccurringClient'
 import NewJob from '../components/Manager/NewJob'
-// import ManagerNavbar from './ManagerNavbar'
+import ManagerNavbar from '../components/Manager/ManagerNavBar'
 
 function CreateJob() {
   const [occurringClient, setOccurringClient] = useState(false)
@@ -15,7 +15,7 @@ function CreateJob() {
 
   return (
     <>
-      {/* <ManagerNavbar /> */}
+      <ManagerNavbar />
       {/* Occurring Client checkbox */}
       <label>
         Occurring Client
