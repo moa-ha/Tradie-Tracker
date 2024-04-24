@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { Job } from '../../models/jobs'
+import { Job, JobData } from '../../models/jobs'
 
 const rootUrl = '/api/v1/'
 
@@ -20,4 +20,8 @@ export async function deleteJob(id: number) {
 export async function editJobById(input: Job) {
   const id = input.id
   await request.patch(`${rootUrl}/manager/${id}`).send(input)
+}
+
+export async function createJob(data: JobData) {
+  await request.post(`${rootUrl}/manager`).send(data)
 }

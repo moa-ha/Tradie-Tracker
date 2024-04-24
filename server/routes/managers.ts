@@ -47,4 +47,15 @@ router.patch('/:id', async (req, res) => {
   }
 })
 
+router.post('/manager', async (req, res) => {
+  try {
+    const data = req.body
+    await db.addJobs(data)
+    res.sendStatus(201)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
+
 export default router

@@ -4,6 +4,7 @@ import { useJobs } from '../hooks/useJobs'
 import Assign from '../components/Manager/Assign'
 import DeleteButton from '../components/Manager/DeleteButton'
 import MapMarker from '../components/MapMarker'
+import ManagerNavbar from '../components/Manager/ManagerNavBar'
 
 function Dashboard() {
   const { data, isLoading, isError, error } = useJobs()
@@ -18,7 +19,7 @@ function Dashboard() {
   if (data) {
     return (
       <>
-        {/* <ManagerNavbar /> */}
+        <ManagerNavbar />
         <div className="layout-jobList">
           <div className="left-content">
             <h1>Job Dashboard</h1>
