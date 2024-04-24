@@ -4,6 +4,7 @@ import { useJobs } from '../hooks/useJobs'
 import Assign from '../components/Manager/Assign'
 import DeleteButton from '../components/Manager/DeleteButton'
 import MapMarker from '../components/MapMarker'
+import CreateJob from './CreateJob'
 
 function Dashboard() {
   const { data, isLoading, isError, error } = useJobs()
