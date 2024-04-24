@@ -92,7 +92,7 @@ function Form(props: Props) {
         Price:
         <input
           onChange={handleChange}
-          value={formState.price}
+          value={formState.quotation}
           type="number"
           name="price"
           // placeholder={data.price}
