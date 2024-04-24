@@ -15,7 +15,7 @@ function JobDetail() {
     return <>error: {error}</>
   }
 
-  if (data) {
+  if (data.id == id) {
     return (
       <>
         <ManagerNavbar />

@@ -46,7 +46,7 @@ function Form(props: Props) {
         Job Title:
         <input
           onChange={handleChange}
-          value={data.title}
+          value={formState.title}
           type="text"
           name="title"
           placeholder={data.title}
@@ -55,7 +55,7 @@ function Form(props: Props) {
         Due Date:
         <input
           onChange={handleChange}
-          value={data.date}
+          value={formState.date}
           type="date"
           name="date"
           placeholder={data.date}
@@ -64,7 +64,7 @@ function Form(props: Props) {
         Time:
         <input
           onChange={handleChange}
-          value={data.time}
+          value={formState.time}
           type="time"
           name="time"
           placeholder={data.date}
@@ -73,7 +73,7 @@ function Form(props: Props) {
         Location:
         <input
           onChange={handleChange}
-          value={data.location}
+          value={formState.location}
           type="text"
           name="location"
           placeholder={data.location}
@@ -85,7 +85,7 @@ function Form(props: Props) {
           onChange={(e) =>
             setFormState({ ...formState, description: e.target.value })
           }
-          value={data.description}
+          value={formState.description}
           name="description"
           placeholder={data.description}
         />
@@ -93,10 +93,10 @@ function Form(props: Props) {
         Quotation:
         <input
           onChange={handleChange}
-          value={data.quotation}
+          value={formState.quotation}
           type="number"
           name="quotation"
-          // placeholder={data.quotation}
+          placeholder={String(data.quotation)}
         />
         <br></br>
         <button type="submit">save</button>
