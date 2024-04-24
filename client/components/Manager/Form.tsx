@@ -81,6 +81,7 @@ function Form(props: Props) {
         <br></br>
         Description:
         <textarea
+          className="display-size"
           onChange={(e) =>
             setFormState({ ...formState, description: e.target.value })
           }
