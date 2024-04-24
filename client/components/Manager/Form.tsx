@@ -98,6 +98,7 @@ function Form(props: Props) {
           name="price"
           // placeholder={data.price}
         />
+        <br></br>
         <button type="submit">save</button>
       </form>
     </>
