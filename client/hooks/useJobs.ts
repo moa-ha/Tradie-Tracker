@@ -5,7 +5,7 @@ import {
   MutationFunction,
 } from '@tanstack/react-query'
 import * as api from '../apis/jobs'
-import { Job } from '../../models/jobs'
+import { Job, JobData } from '../../models/jobs'
 
 export function useJobs() {
   return useQuery({ queryKey: ['jobs'], queryFn: () => api.getJobs() })
@@ -31,6 +31,14 @@ export function useEditJobById() {
   return useMutation({
     mutationFn: (input: Job) => api.editJobById(input),
     onSuccess: () => qc.invalidateQueries({ queryKey: ['jobs'] }),
+  })
+}
+
+export function useCreateJob() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (input: JobData) => api.createJob(input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['newJob'] }),
   })
 }
 // export function useFruitsMutation<TData = unknown, TVariables = unknown>(
