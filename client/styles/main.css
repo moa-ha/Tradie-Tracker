@@ -265,9 +265,14 @@ link {
   grid-row: 1;
 }
 
-.job-card .time {
+.job-card .date {
   grid-column: 2;
   grid-row: 1;
+}
+
+.job-card .time {
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 
 .location {
@@ -289,7 +294,7 @@ link {
 .job-card .edit {
   grid-row: 1;
 }
-.edit-job-btn {
+.dashboard-btn {
   padding-right: 20px;
 }
 
@@ -297,10 +302,6 @@ link {
   grid-row: 2;
 }
 
-.job-card .date {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-}
 /* ----------------------------------------------------- */
 /* Job card employee*/
 /* ----------------------------------------------------- */
