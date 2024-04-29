@@ -3,7 +3,6 @@ import checkJwt, { JwtRequest } from '../auth0.ts'
 import { StatusCodes } from 'http-status-codes'
 
 import * as db from '../db/jobs.ts'
-import { useParams } from 'react-router-dom'
 
 const router = Router()
 
@@ -20,7 +19,6 @@ router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params
     const job = await db.getJobById(Number(id))
-    console.log(job)
 
     res.json(job)
   } catch (error) {
@@ -47,7 +45,7 @@ router.patch('/:id', async (req, res) => {
   }
 })
 
-router.post('/manager', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const data = req.body
     await db.addJobs(data)

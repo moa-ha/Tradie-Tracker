@@ -78,6 +78,7 @@ button:hover {
   transition: 0.3s;
   border-radius: 5px;
   margin-right: 3rem;
+  margin-top: 5rem;
 }
 
 link {
@@ -253,21 +254,14 @@ link {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  padding: 0.7rem 1.5rem;
+  column-gap: 10px;
+  padding: 0.7rem 0em 0rem 1.5rem;
   margin-bottom: 1rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-.job-card .title {
+.title {
   font-weight: bold;
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.job-card .time {
-  grid-column: 2;
-  grid-row: 1;
 }
 
 .location {
@@ -277,30 +271,32 @@ link {
   grid-row: 2;
 }
 
-.job-card .edit,
-.job-card .assign {
-  grid-column: 4;
-  justify-self: end;
-  width: 100px; /* Adjust this value to suit your needs */
-  height: auto;
-  box-sizing: border-box;
+.dashboard-btn {
+  margin: 3px;
+  float: right;
 }
 
-.job-card .edit {
-  grid-row: 1;
-}
-.edit-job-btn {
-  padding-right: 20px;
+/* Job Detail after show-more */
+
+.job-detail {
+  display: grid;
+  grid-column: 1 / span 4;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(auto, auto);
 }
 
-.job-card .assign {
-  grid-row: 2;
+.job-detail .job-description {
+  grid-column: 1 / span 4;
 }
 
-.job-card .date {
-  grid-column: 3;
-  grid-row: 1 / span 2;
+.job-detail .quotation {
+  grid-column: 1;
 }
+
+.job-detail .complete {
+  grid-column: 2;
+}
+
 /* ----------------------------------------------------- */
 /* Job card employee*/
 /* ----------------------------------------------------- */

@@ -12,16 +12,17 @@ function ToggleButton({ job }: Props) {
   }
   return (
     <>
-      <button onClick={handleToggle}>
+      <button onClick={handleToggle} className="dashboard-btn">
         {isShow ? 'Show less' : 'Show more'}
       </button>
 
       {isShow && (
-        <p>
-          Job Description: {job.description}
-          <br></br>Quotation: ${job.quotation}
-          <br></br>
-          Complete? {job.complete ? '⭕️' : '❌'}
+        <p className="job-detail">
+          <div className="job-description">
+            Job Description: {job.description}
+          </div>
+          <div className="quotation">Quotation: ${job.quotation}</div>
+          <div className="complete">Complete? {job.complete ? '⭕️' : '❌'}</div>
         </p>
       )}
     </>
