@@ -297,6 +297,12 @@ link {
   grid-column: 2;
 }
 
+/* Completed Job page */
+
+.review {
+  grid-column: 3 / span 2;
+  margin: 5px;
+}
 /* ----------------------------------------------------- */
 /* Job card employee*/
 /* ----------------------------------------------------- */
