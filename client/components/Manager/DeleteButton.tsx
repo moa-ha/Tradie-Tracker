@@ -13,7 +13,9 @@ function DeleteButton({ id }: Id) {
   }
   return (
     <>
-      <button onClick={handleClick}>Delete</button>
+      <button onClick={handleClick} className="dashboard-btn">
+        Delete
+      </button>
     </>
   )
 }

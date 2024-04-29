@@ -26,22 +26,22 @@ function Dashboard() {
             {data.map((job) => (
               <div className="job-card" key={job.id}>
                 <div className="title">{job.title}</div>
-                <div className="date">{job.date}</div>
-                <div className="time">{job.time}</div>
+                <div>{job.date}</div>
+                <div>{job.time}</div>
                 <div className="location">{job.location || 'Address'}</div>
-                <ToggleButton job={job} />
-                <div className="edit">
+                <div>
+                  <DeleteButton id={job.id} />
                   <Link to={`/manager/${job.id}`}>
                     <button className="dashboard-btn">Edit</button>
                   </Link>
-
-                  <DeleteButton id={job.id} />
                 </div>
-                {/* <Assign id={job.id} /> */}
-                {/* <div className="assign">
-                  <button key={job.employee_id}>Assign</button>
-                </div> */}
-                <div className="date">{job.date}</div>
+                <div>
+                  <Assign id={job.id} />
+                  <button key={job.employee_id} className="dashboard-btn">
+                    ✔️
+                  </button>
+                </div>
+                <ToggleButton job={job} />
               </div>
             ))}
           </div>

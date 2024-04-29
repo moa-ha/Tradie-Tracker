@@ -12,7 +12,7 @@ function ToggleButton({ job }: Props) {
   }
   return (
     <>
-      <button onClick={handleToggle}>
+      <button onClick={handleToggle} className="dashboard-btn">
         {isShow ? 'Show less' : 'Show more'}
       </button>
 
