@@ -15,6 +15,16 @@ router.get('/', async (req, res) => {
   }
 })
 
+router.get('/completed', async (req, res) => {
+  try {
+    const completedJobs = await db.getCompletedJobs()
+    res.json(completedJobs)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
+
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params

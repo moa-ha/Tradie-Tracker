@@ -26,7 +26,7 @@ function ManagerNavbar() {
           <Link to={`/notifications`}>
             <img className="nav-icon" alt="notify-icon" src={notify}></img>
           </Link>
-          <Link to={`/manager/complete`}>
+          <Link to={`/manager/completed`}>
             <img className="nav-icon" alt="complete-icon" src={complete}></img>
           </Link>
           <Link to={`/manager/:id/profile`}>

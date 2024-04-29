@@ -3,11 +3,13 @@ import Home from './components/Home.tsx'
 import Dashboard from './pages/Dashboard.tsx'
 import JobDetail from './pages/JobDetail.tsx'
 import CreateJob from './pages/CreateJob.tsx'
+import Completed from './pages/Completed.tsx'
 export default createRoutesFromElements(
   <Route>
     <Route index element={<Home />} />
     <Route path="/manager" element={<Dashboard />} />
     <Route path="/manager/:id" element={<JobDetail />} />
     <Route path="/manager/create" element={<CreateJob />} />
+    <Route path="/manager/completed" element={<Completed />} />
   </Route>,
 )

@@ -41,6 +41,13 @@ export function useCreateJob() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['newJob'] }),
   })
 }
+
+export function useCompletedJobs() {
+  return useQuery({
+    queryKey: ['CompJobs'],
+    queryFn: () => api.getCompletedJobs(),
+  })
+}
 // export function useFruitsMutation<TData = unknown, TVariables = unknown>(
 //   mutationFn: MutationFunction<TData, TVariables>,
 // ) {

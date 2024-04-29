@@ -25,3 +25,8 @@ export async function editJobById(input: Job) {
 export async function createJob(data: JobData) {
   await request.post(`${rootUrl}/manager`).send(data)
 }
+
+export async function getCompletedJobs() {
+  const res = await request.get(`${rootUrl}/manager/completed`)
+  return res.body as Job[]
+}

@@ -7,6 +7,11 @@ export async function getJobs() {
   return jobs as Job[]
 }
 
+export async function getCompletedJobs() {
+  const completedJobs = await db('jobs').where('complete', true)
+  return completedJobs
+}
+
 export async function getJobById(id: number) {
   return await db('jobs').where({ id }).first()
 }
