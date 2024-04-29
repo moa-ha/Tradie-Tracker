@@ -11,7 +11,7 @@ export async function seed(knex) {
       location: 'unit 2/48 Ellice Road, Glenfield, Auckland 0629',
       date: '11 July 2024',
       time: '10:00',
-      complete: false,
+      complete: true,
       quotation: 100,
       manhour: 2,
       review: 'good',
