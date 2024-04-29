@@ -22,3 +22,7 @@ export async function editJob(data: Job) {
 export async function addJobs(data: JobData) {
   return await db('jobs').insert(data)
 }
+
+export async function getCompletedJobs() {
+  return await db('jobs').where('complete', true).select()
+}

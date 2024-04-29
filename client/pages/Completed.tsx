@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react'
+// import { SetStateAction, useState } from 'react'
 import { useCompletedJobs } from '../hooks/useJobs'
 // import Search from '../Search'
 import ManagerNavbar from '../components/Manager/ManagerNavBar'
@@ -6,13 +6,13 @@ import ManagerNavbar from '../components/Manager/ManagerNavBar'
 function Completed() {
   const { data, isLoading, isError, error } = useCompletedJobs()
 
-  const [search, setSearch] = useState('')
+  // const [search, setSearch] = useState('')
 
-  const handleSearchChange = (event: {
-    target: { value: SetStateAction<string> }
-  }) => {
-    setSearch(event.target.value)
-  }
+  // const handleSearchChange = (event: {
+  //   target: { value: SetStateAction<string> }
+  // }) => {
+  //   setSearch(event.target.value)
+  // }
 
   if (isLoading) {
     return <p>Loading...</p>
@@ -20,9 +20,12 @@ function Completed() {
   if (isError) {
     return <p>Error: {error?.message}</p>
   }
+  console.log(data)
+
   if (data) {
+    console.log(data)
     // Filter jobs based on the job title
-    data.filter((job) => job.title.toLowerCase().includes(search.toLowerCase()))
+    // data.filter((job) => job.title.toLowerCase().includes(search.toLowerCase()))
 
     return (
       <>

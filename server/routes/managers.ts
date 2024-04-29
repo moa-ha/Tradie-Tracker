@@ -56,4 +56,15 @@ router.post('/', async (req, res) => {
   }
 })
 
+router.get('/completed', async (req, res) => {
+  try {
+    const completed = await db.getCompletedJobs()
+    res.json(completed)
+    console.log(completed)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
+
 export default router
