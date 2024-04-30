@@ -1,7 +1,7 @@
 // import { SetStateAction, useState } from 'react'
-import { useCompletedJobs } from '../hooks/useJobs'
+import { useCompletedJobs } from '../../hooks/useJobs'
 // import Search from '../Search'
-import ManagerNavbar from '../components/Manager/ManagerNavBar'
+import ManagerNavbar from '../../components/Manager/ManagerNavBar'
 
 function Completed() {
   const { data, isLoading, isError, error } = useCompletedJobs()

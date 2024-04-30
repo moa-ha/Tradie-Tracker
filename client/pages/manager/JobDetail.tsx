@@ -1,7 +1,7 @@
-import { useJobById } from '../hooks/useJobs'
+import { useJobById } from '../../hooks/useJobs'
 import { useParams } from 'react-router-dom'
-import Form from '../components/Manager/Form'
-import ManagerNavbar from '../components/Manager/ManagerNavBar'
+import Form from '../../components/Manager/Form'
+import ManagerNavbar from '../../components/Manager/ManagerNavBar'
 
 function JobDetail() {
   const id = Number(useParams().id)

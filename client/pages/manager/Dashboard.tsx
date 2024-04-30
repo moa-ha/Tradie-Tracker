@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import ToggleButton from '../components/ToggleButton'
-import { useJobs } from '../hooks/useJobs'
-import Assign from '../components/Manager/Assign'
-import DeleteButton from '../components/Manager/DeleteButton'
-import MapMarker from '../components/MapMarker'
-import ManagerNavbar from '../components/Manager/ManagerNavBar'
+import ToggleButton from '../../components/ToggleButton'
+import { useJobs } from '../../hooks/useJobs'
+import Assign from '../../components/Manager/Assign'
+import DeleteButton from '../../components/Manager/DeleteButton'
+import MapMarker from '../../components/MapMarker'
+import ManagerNavbar from '../../components/Manager/ManagerNavBar'
 
 function Dashboard() {
   const { data, isLoading, isError, error } = useJobs()
