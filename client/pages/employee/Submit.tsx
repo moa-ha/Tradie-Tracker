@@ -1,25 +1,24 @@
-// SubmitJob.tsx
-
 import { useParams } from 'react-router-dom'
-// import { useJobByEmpId } from '../../hooks/useJobs'
 import SubmitForm from '../../components/Employee/SubmitForm'
+import { useGetScheduleById, useSubmitJob } from '../../hooks/useJobs'
+import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 
 function Submit() {
-  const employeeId = Number(useParams().employeeId)
-  const jobId = Number(useParams().jobId)
+  const { id } = useParams()
+  const { data, isError, error } = useGetScheduleById(Number(id))
 
-  // const { data, isLoading, isError, error } = useJobByEmpId(employeeId, jobId)
+  if (isError) {
+    return <>error: {error}</>
+  }
 
-  // if (isLoading) {
-  //   return <>is loading</>
-  // }
-  // if (isError) {
-  //   return <>error: {error}</>
-  // }
-
-  // if (data) {
-  //   return <SubmitForm data={data} />
-  // }
+  if (data) {
+    return (
+      <>
+        <EmployeeNavBar />
+        <SubmitForm data={data} />
+      </>
+    )
+  }
 }
 
 export default Submit

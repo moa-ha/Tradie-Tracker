@@ -58,6 +58,13 @@ export function useGetScheduleById(id: number) {
   })
 }
 
+export function useSubmitJob() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (input: Job) => api.submitJob(input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['submit'] }),
+  })
+}
 // export function useFruitsMutation<TData = unknown, TVariables = unknown>(
 //   mutationFn: MutationFunction<TData, TVariables>,
 // ) {
