@@ -61,17 +61,32 @@ function SubmitForm(props: Props) {
             className="read-only"
             type="text"
             name="title"
-            placeholder={data.title}
           />
-          <p>Review:</p>
+          Location:
+          <input
+            value={data.location}
+            readOnly
+            className="read-only"
+            type="text"
+            name="location"
+          />
+          Date:
+          <input
+            value={data.date}
+            readOnly
+            className="read-only"
+            type="text"
+            name="date"
+          />
+          <p>How did it go?</p>
           <textarea
             className="display-size"
             onChange={(e) =>
               setFormState({ ...formState, description: e.target.value })
             }
-            value={formState.review}
+            // value={formState.review}
             name="review"
-            placeholder="Enter review"
+            placeholder="Enter review or add more job detail"
           />
           <br />
           Worked Hours:
