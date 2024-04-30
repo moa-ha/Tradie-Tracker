@@ -30,6 +30,6 @@ export async function addJobs(data: JobData) {
 
 // employee's page
 
-export async function getJobsById(id: number) {
+export async function getScheduleById(id: number) {
   return await db('jobs').where('employee_id', id)
 }

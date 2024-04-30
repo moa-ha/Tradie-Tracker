@@ -1,12 +1,7 @@
-import { FormEvent, useState } from 'react'
-
 import { useAddReview, useAllJobsByEmpId } from '../../hooks/useJobs'
 import { Link, useParams } from 'react-router-dom'
 import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 import MapMarker from '../../components/MapMarker'
-
-// import { useAllJobsByEmpId } from '../../hooks/useJobs'
-// import { Link, useParams } from 'react-router-dom'
 
 function Schedule() {
   const { id } = useParams()

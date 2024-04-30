@@ -6,7 +6,7 @@ const router = Router()
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params
-    const job = await db.getJobsById(Number(id))
+    const job = await db.getScheduleById(Number(id))
 
     res.json(job)
   } catch (error) {
