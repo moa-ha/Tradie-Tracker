@@ -1,8 +1,4 @@
-import {
-  useAddReview,
-  useAllJobsByEmpId,
-  useGetScheduleById,
-} from '../../hooks/useJobs'
+import { useGetScheduleById } from '../../hooks/useJobs'
 import { Link, useParams } from 'react-router-dom'
 import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 import MapMarker from '../../components/MapMarker'
@@ -18,22 +14,27 @@ function Schedule() {
   }
 
   if (data) {
-    console.log(data)
     return (
       <>
         <EmployeeNavBar />
-        <h1>Current jobs:</h1>
-        <ul key="schedule">
-          {data.map((job) => (
-            <li key={job.id}>
-              {job.title}, {job.date}, {job.time}, {job.location}
-              <Link to={`/jobs/employee/${id}/${job.id}`}>
-                <button>Submit Completion</button>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <MapMarker locations={[]} />
+        <div className="layout-jobList">
+          <div className="left-content">
+            <h1>Current jobs:</h1>
+
+            {data.map((job) => (
+              <div className="job-card" key={job.id}>
+                <div className="title">{job.title}</div>
+                <div>{job.date}</div>
+                <div>{job.time}</div>
+                <div className="location">{job.location || 'Address'}</div>
+                <Link to={`/employee/${id}/${job.id}`}>
+                  <button>Submit Completion</button>
+                </Link>
+              </div>
+            ))}
+          </div>
+          <MapMarker locations={[]} />
+        </div>
       </>
     )
   }
