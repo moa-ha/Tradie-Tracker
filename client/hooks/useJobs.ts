@@ -51,10 +51,10 @@ export function useCompletedJobs() {
 
 // employee's page
 
-export function useGetJobsById() {
+export function useGetScheduleById(id: number) {
   return useQuery({
     queryKey: ['schedule'],
-    queryFn: () => api.getJobsById(),
+    queryFn: () => api.getScheduleById(id),
   })
 }
 

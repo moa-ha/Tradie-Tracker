@@ -1,8 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
-import logo from '/images/logo.svg'
-import bricksLogo from '/images/bricks.svg'
-import notify from '/images/notify.svg'
-import profile from '/images/profile.svg'
+import logo from '../../styles/images/logo.svg'
+import bricksLogo from '../../styles/images/bricks.svg'
+import notify from '../../styles/images/notify.svg'
+import profile from '../../styles/images/profile.svg'
 
 function EmployeeNavBar() {
   const { id } = useParams()
@@ -14,7 +14,7 @@ function EmployeeNavBar() {
             <img className="crane-logo" alt="logo" src={logo}></img>
             <img className="bricks-logo" alt="logo" src={bricksLogo}></img>
           </Link>
-          <Link className="h1-nav-link" to={`/jobs/employee/${id}`}>
+          <Link className="h1-nav-link" to={`/employee/${id}`}>
             <h1 className="h1-nav">Tradie Tracker</h1>
           </Link>
         </div>

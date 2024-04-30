@@ -1,11 +1,15 @@
-import { useAddReview, useAllJobsByEmpId } from '../../hooks/useJobs'
+import {
+  useAddReview,
+  useAllJobsByEmpId,
+  useGetScheduleById,
+} from '../../hooks/useJobs'
 import { Link, useParams } from 'react-router-dom'
 import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 import MapMarker from '../../components/MapMarker'
 
 function Schedule() {
   const { id } = useParams()
-  const { data, isLoading, isError, error } = useAllJobsByEmpId(Number(id))
+  const { data, isLoading, isError, error } = useGetScheduleById(Number(id))
   if (isLoading) {
     return <p>Loading...</p>
   }
@@ -24,7 +28,7 @@ function Schedule() {
             <li key={job.id}>
               {job.title}, {job.date}, {job.time}, {job.location}
               <Link to={`/jobs/employee/${id}/${job.id}`}>
-                <button>Submit Job</button>
+                <button>Submit Completion</button>
               </Link>
             </li>
           ))}
