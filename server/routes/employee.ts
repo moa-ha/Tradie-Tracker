@@ -14,7 +14,19 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-router.patch('/:id/submit', async (req, res) => {
+router.get('/:employeeId/:jobId', async (req, res) => {
+  const employeeId = Number(req.params.employeeId)
+  const jobId = Number(req.params.jobId)
+  try {
+    const data = await db.getTask(employeeId, jobId)
+    res.json(data)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
+
+router.patch('/:employeeId/:jobId', async (req, res) => {
   try {
     await db.submitJob(req.body)
     res.sendStatus(204)

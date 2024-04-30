@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom'
 import SubmitForm from '../../components/Employee/SubmitForm'
-import { useGetScheduleById, useSubmitJob } from '../../hooks/useJobs'
+import { useTask } from '../../hooks/useJobs'
 import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 
 function Submit() {
-  const { id } = useParams()
-  const { data, isError, error } = useGetScheduleById(Number(id))
+  const employeeId = Number(useParams().employeeId)
+  const jobId = Number(useParams().jobId)
+
+  const { data, isError, error } = useTask(employeeId, jobId)
 
   if (isError) {
     return <>error: {error}</>

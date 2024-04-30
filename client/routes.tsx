@@ -15,6 +15,6 @@ export default createRoutesFromElements(
     <Route path="/manager/create" element={<CreateJob />} />
     <Route path="/manager/completed" element={<Completed />} />
     <Route path="/employee/:id" element={<Schedule />} />
-    <Route path="/employee/:id/submit" element={<Submit />} />
+    <Route path="/employee/:employeeId/:jobId" element={<Submit />} />
   </Route>,
 )

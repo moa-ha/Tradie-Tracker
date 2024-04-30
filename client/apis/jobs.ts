@@ -39,7 +39,13 @@ export async function getScheduleById(id: number) {
   return res.body
 }
 
+export async function getTask(employeeId: number, jobId: number) {
+  const res = await request.get(`${rootUrl}/employee/${employeeId}/${jobId}`)
+  return res.body
+}
+
 export async function submitJob(input: Job) {
-  const id = input.id
-  await request.patch(`${rootUrl}/employee/${id}`).send(input)
+  const employeeId = input.employee_id
+  const jobId = input.id
+  await request.patch(`${rootUrl}/employee/${employeeId}/${jobId}`).send(input)
 }

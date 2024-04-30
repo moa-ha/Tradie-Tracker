@@ -27,7 +27,7 @@ function Schedule() {
                 <div>{job.date}</div>
                 <div>{job.time}</div>
                 <div className="location">{job.location || 'Address'}</div>
-                <Link to={`/employee/${id}/submit/${job.id}`}>
+                <Link to={`/employee/${id}/${job.id}`}>
                   <button>Submit Completion</button>
                 </Link>
               </div>

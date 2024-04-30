@@ -12,10 +12,11 @@ type Props = {
 
 function SubmitForm(props: Props) {
   const { data } = props
-  // const id = Number(useParams().id)
+  const jobId = Number(useParams().jobId)
+  const employeeId = Number(useParams().employeeId)
 
   const [formState, setFormState] = useState({
-    id: data.id,
+    id: jobId,
     title: data.title,
     description: data.description,
     location: data.location,
@@ -25,7 +26,7 @@ function SubmitForm(props: Props) {
     quotation: data.quotation,
     manhour: data.manhour,
     review: data.review,
-    employee_id: data.employee_id,
+    employee_id: employeeId,
     client_id: data.client_id,
     manager_id: data.manager_id,
   })
@@ -46,10 +47,8 @@ function SubmitForm(props: Props) {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     mutation.mutate(formState)
-    navigate(`/employee/${id}`)
+    navigate(`/employee/${employeeId}`)
   }
-
-  console.log(data)
 
   return (
     <>
