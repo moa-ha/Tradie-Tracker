@@ -6,12 +6,16 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Job } from '../../../models/jobs'
 import { useSubmitJob } from '../../hooks/useJobs'
 
-function SubmitForm(input: Job) {
-  const { data } = input
-  const id = Number(useParams().id)
+type Props = {
+  data: Job
+}
+
+function SubmitForm(props: Props) {
+  const { data } = props
+  // const id = Number(useParams().id)
 
   const [formState, setFormState] = useState({
-    id: id,
+    id: data.id,
     title: data.title,
     description: data.description,
     location: data.location,
@@ -45,10 +49,21 @@ function SubmitForm(input: Job) {
     navigate(`/employee/${id}`)
   }
 
+  console.log(data)
+
   return (
     <>
       <div className="job-card">
         <form onSubmit={handleSubmit}>
+          Job Title:
+          <input
+            value={data.title}
+            readOnly
+            className="read-only"
+            type="text"
+            name="title"
+            placeholder={data.title}
+          />
           <p>Review:</p>
           <textarea
             className="display-size"
