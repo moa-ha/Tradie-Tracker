@@ -14,4 +14,14 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+router.patch('/:id/submit', async (req, res) => {
+  try {
+    await db.submitJob(req.body)
+    res.sendStatus(204)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
+
 export default router
