@@ -14,5 +14,15 @@ export async function seed(knex) {
       company_id: 1,
       manager_id: 1,
     },
+    {
+      id: 2,
+      name: 'James',
+      bio: 'The second best staff of the year',
+      email: 'james@bunnings.com',
+      phone: '027-0303-201',
+      rating: 4,
+      company_id: 1,
+      manager_id: 1,
+    },
   ])
 }

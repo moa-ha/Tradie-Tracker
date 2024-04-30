@@ -7,6 +7,8 @@ import {
 import * as api from '../apis/jobs'
 import { Job, JobData } from '../../models/jobs'
 
+// manager's page
+
 export function useJobs() {
   return useQuery({ queryKey: ['jobs'], queryFn: () => api.getJobs() })
 }
@@ -58,6 +60,20 @@ export function useGetScheduleById(id: number) {
   })
 }
 
+export function useTask(employeeId: number, jobId: number) {
+  return useQuery({
+    queryKey: ['task'],
+    queryFn: () => api.getTask(employeeId, jobId),
+  })
+}
+export function useSubmitJob() {
+  // const input = { empId, jobId, data }
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (input: Job) => api.submitJob(input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['submit'] }),
+  })
+}
 // export function useFruitsMutation<TData = unknown, TVariables = unknown>(
 //   mutationFn: MutationFunction<TData, TVariables>,
 // ) {

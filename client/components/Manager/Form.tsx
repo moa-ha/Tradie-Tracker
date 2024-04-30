@@ -99,6 +99,16 @@ function Form(props: Props) {
           placeholder={String(data.quotation)}
         />
         <br></br>
+        Review from Employee:
+        <input
+          className="read-only"
+          value={formState.review}
+          readOnly
+          type="text"
+          name="review"
+          placeholder={String(data.review)}
+        />
+        <br></br>
         <button type="submit">save</button>
       </form>
     </>

@@ -33,3 +33,13 @@ export async function addJobs(data: JobData) {
 export async function getScheduleById(id: number) {
   return await db('jobs').where('employee_id', id)
 }
+
+export async function getTask(employeeId: number, jobId: number) {
+  return await db('jobs')
+    .where('employee_id', employeeId)
+    .andWhere('id', jobId)
+    .first()
+}
+export async function submitJob(input: Job) {
+  return await db('jobs').where('id', input.id).update(input)
+}
