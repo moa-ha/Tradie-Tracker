@@ -1,9 +1,10 @@
 import { createRoutesFromElements, Route } from 'react-router-dom'
-import Dashboard from './pages/Dashboard.tsx'
-import JobDetail from './pages/JobDetail.tsx'
-import CreateJob from './pages/CreateJob.tsx'
-import Completed from './pages/Completed.tsx'
-import Home from './pages/Home.tsx'
+import Dashboard from './Pages/manager/Dashboard.tsx'
+import JobDetail from './Pages/manager/JobDetail.tsx'
+import CreateJob from './Pages/manager/CreateJob.tsx'
+import Completed from './Pages/manager/Completed.tsx'
+import Home from './Pages/Home.tsx'
+import Schedule from './Pages/employee/Schedule.tsx'
 export default createRoutesFromElements(
   <Route>
     <Route index element={<Home />} />
@@ -11,5 +12,6 @@ export default createRoutesFromElements(
     <Route path="/manager/:id" element={<JobDetail />} />
     <Route path="/manager/create" element={<CreateJob />} />
     <Route path="/manager/completed" element={<Completed />} />
+    <Route path="/employee/:id" element={<Schedule />} />
   </Route>,
 )

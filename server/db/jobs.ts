@@ -27,3 +27,9 @@ export async function editJob(data: Job) {
 export async function addJobs(data: JobData) {
   return await db('jobs').insert(data)
 }
+
+// employee's page
+
+export async function getScheduleById(id: number) {
+  return await db('jobs').where('employee_id', id)
+}

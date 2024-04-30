@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import NewClient from '../components/Manager/NewClient'
-import OccurringClient from '../components/Manager/OccurringClient'
-import NewJob from '../components/Manager/NewJob'
-import ManagerNavbar from '../components/Manager/ManagerNavBar'
+import NewClient from '../../components/Manager/NewClient'
+import OccurringClient from '../../components/Manager/OccurringClient'
+import NewJob from '../../components/Manager/NewJob'
+import ManagerNavbar from '../../components/Manager/ManagerNavBar'
 
 function CreateJob() {
   const [occurringClient, setOccurringClient] = useState(false)

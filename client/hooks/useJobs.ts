@@ -48,6 +48,16 @@ export function useCompletedJobs() {
     queryFn: () => api.getCompletedJobs(),
   })
 }
+
+// employee's page
+
+export function useGetScheduleById(id: number) {
+  return useQuery({
+    queryKey: ['schedule'],
+    queryFn: () => api.getScheduleById(id),
+  })
+}
+
 // export function useFruitsMutation<TData = unknown, TVariables = unknown>(
 //   mutationFn: MutationFunction<TData, TVariables>,
 // ) {

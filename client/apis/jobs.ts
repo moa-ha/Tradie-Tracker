@@ -30,3 +30,8 @@ export async function getCompletedJobs() {
   const res = await request.get(`${rootUrl}/manager/completed`)
   return res.body as Job[]
 }
+
+export async function getScheduleById(id: number) {
+  const res = await request.get(`${rootUrl}/employee/${id}`)
+  return res.body
+}
