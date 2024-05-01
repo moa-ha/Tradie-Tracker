@@ -1,16 +1,18 @@
 ### My-App
 
-Website for managers to manage schedule effectively for their employees by visualized location information.
-This idea was goup project at bootcamp and I took a front-end lead.
+<b>Efficient Work Scheduling App.</b><br>
+This project is from group project from Dev Academy, and I am remaking from the scratch to consolidate the concepts and make clear code. The idea was to make a scheduling app using all the tools including front & backend skills we've learnt throughout the bootcamp, and I took a front-end lead.
 
 ## Role
 
 * Front-end routing
 * Component management
 * Naming functions 
-(photo)
 
-Demo: http://... (after deployment)
+### While rearranging...
+
+* matched front & backend routing and function names
+* rearranged Pages & Components
 
 ## Goal
 
@@ -21,18 +23,16 @@ Use backend and frontend routes to save and filter data.
 * HTML
 * CSS
 * JavaScript
-* Auth0
+* React
 * Knex
+* SQLite3
 
-## Advanced Feature
+## Stretch Goal
 
-Google map api implementation
-
-(photo)
-
-(code)
+Google map api implementation<br>
+<img src="./client/styles/wireframe/wireframe(1).png" alt="Example Image" style="width: 500px; height: auto;">
 
 ## To be improved
 
 Media query screen
-Employee page functions to implement
+
