@@ -34,13 +34,6 @@ export async function getCompletedJobs() {
   return res.body as Job[]
 }
 
-// to assign employee to each job
-
-export async function getEmployees(): Promise<Employee[]> {
-  const res = await request.get(`${rootUrl}/manager`)
-  return res.body.employees as Employee[]
-}
-
 // for employees
 export async function getScheduleById(id: number) {
   const res = await request.get(`${rootUrl}/employee/${id}`)
