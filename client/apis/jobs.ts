@@ -7,7 +7,7 @@ const rootUrl = '/api/v1/'
 
 export async function getJobs(): Promise<Job[]> {
   const res = await request.get(`${rootUrl}/manager`)
-  return res.body as Job[]
+  return res.body.jobs as Job[]
 }
 
 export async function getJobById(id: number) {
