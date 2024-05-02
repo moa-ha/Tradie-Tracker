@@ -1,5 +1,6 @@
 import request from 'superagent'
 import { Job, JobData } from '../../models/jobs'
+import { Employee } from '../../models/employees'
 
 const rootUrl = '/api/v1/'
 
@@ -33,7 +34,14 @@ export async function getCompletedJobs() {
   return res.body as Job[]
 }
 
-//for employees
+// to assign employee to each job
+
+export async function getEmployees(): Promise<Employee[]> {
+  const res = await request.get(`${rootUrl}/manager`)
+  return res.body.employees as Employee[]
+}
+
+// for employees
 export async function getScheduleById(id: number) {
   const res = await request.get(`${rootUrl}/employee/${id}`)
   return res.body

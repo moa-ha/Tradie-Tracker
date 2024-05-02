@@ -1,0 +1,33 @@
+import { useState } from 'react'
+import { useEmployees } from '../../hooks/useEmployees'
+
+function EmployeeList() {
+  const { data, isLoading, isError, error } = useEmployees()
+  const [selectedEmployee, setSelectedEmployee] = useState<number | null>(null)
+
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
+  if (isError) {
+    return <p>Error: {error?.message}</p>
+  }
+  if (data) {
+    return (
+      <>
+        {/* Dropdown to select employee */}
+        <select
+          value={selectedEmployee ?? data.id}
+          onChange={(e) => setSelectedEmployee(parseInt(e.target.value))}
+        >
+          {data.map((employee) => (
+            <option key={employee.id} value={employee.id}>
+              {employee.name}
+            </option>
+          ))}
+        </select>
+      </>
+    )
+  }
+}
+
+export default EmployeeList
