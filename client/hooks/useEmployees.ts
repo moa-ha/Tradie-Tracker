@@ -5,7 +5,7 @@ import {
   MutationFunction,
 } from '@tanstack/react-query'
 import * as api from '../apis/employees'
-import { Employee, EmployeeData } from '../../models/jobs'
+import { Employee, EmployeeData } from '../../models/employees'
 
 // to assign employee to each job
 

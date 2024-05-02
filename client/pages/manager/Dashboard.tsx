@@ -5,6 +5,7 @@ import Assign from '../../components/Manager/Assign'
 import DeleteButton from '../../components/Manager/DeleteButton'
 import MapMarker from '../../components/MapMarker'
 import ManagerNavbar from '../../components/Manager/ManagerNavBar'
+import EmployeeList from '../../components/Manager/EmployeeList'
 
 function Dashboard() {
   const { data, isLoading, isError, error } = useJobs()
@@ -36,10 +37,7 @@ function Dashboard() {
                   </Link>
                 </div>
                 <div>
-                  <Assign id={job.id} />
-                  <button key={job.employee_id} className="dashboard-btn">
-                    ✔️
-                  </button>
+                  <EmployeeList />
                 </div>
                 <ToggleButton job={job} />
               </div>
