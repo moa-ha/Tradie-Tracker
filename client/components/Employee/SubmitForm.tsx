@@ -44,7 +44,7 @@ function SubmitForm(props: Props) {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     mutation.mutate(formState)
-    navigate(`/employee/${employeeId}`)
+    navigate(`/employee/${employeeId}/schedule`)
   }
 
   return (
