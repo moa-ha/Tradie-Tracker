@@ -3,7 +3,10 @@ import { useEmployees } from '../../hooks/useEmployees'
 import { useAssignEe } from '../../hooks/useJobs'
 import { Assign } from '../../../models/jobs'
 
-function EmployeeList({ id }: Assign) {
+interface Id {
+  id: number
+}
+function EmployeeList({ id }: Id) {
   // bring employee list
   const { data, isLoading, isError, error } = useEmployees()
   const [selectedEmployee, setSelectedEmployee] = useState({
@@ -21,7 +24,6 @@ function EmployeeList({ id }: Assign) {
   }
 
   const handleEmployeeChange = (e: { target: { value: string } }) => {
-    console.log('id from jobcard: ' + id)
     setSelectedEmployee((prev) => ({
       ...prev,
       employee_id: parseInt(e.target.value),
@@ -34,8 +36,6 @@ function EmployeeList({ id }: Assign) {
   }
 
   if (data) {
-    console.log(data)
-
     return (
       <>
         <select
@@ -49,7 +49,7 @@ function EmployeeList({ id }: Assign) {
             </option>
           ))}
         </select>
-        {console.log(selectedEmployee)}
+
         <button onClick={handleClick} className="dashboard-btn">
           ✔️
         </button>
