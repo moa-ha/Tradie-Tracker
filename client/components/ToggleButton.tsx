@@ -26,15 +26,8 @@ function ToggleButton({ job }: Props) {
           </div>
           <div className="quotation">Quotation: ${job.quotation}</div>
           <div className="complete">Complete? {job.complete ? '⭕️' : '❌'}</div>
-          {/* <div> */}
-          {/* {if(job.employee_id !==0) {
-             return <div>Assigned</div>
-            }} */}
+
           <AssignedEe id={job.employee_id} />
-          {/* {job.employee_id !== 0
-              ? `Assigned ${job.employee_id}`
-              : 'Not yet assigned employee'}
-          </div> */}
         </p>
       )}
     </>
