@@ -1,7 +1,6 @@
-import { FormEvent, MouseEventHandler, useState } from 'react'
+import { MouseEventHandler, useState } from 'react'
 import { useEmployees } from '../../hooks/useEmployees'
 import { useAssignEe } from '../../hooks/useJobs'
-import { Assign } from '../../../models/jobs'
 
 interface Id {
   id: number
