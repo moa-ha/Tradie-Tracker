@@ -39,10 +39,6 @@ export async function assignEe(input: Assign) {
 }
 
 // for employees
-export async function getScheduleById(id: number) {
-  const res = await request.get(`${rootUrl}/employee/${id}`)
-  return res.body
-}
 
 export async function getTask(employeeId: number, jobId: number) {
   const res = await request.get(`${rootUrl}/employee/${employeeId}/${jobId}`)

@@ -36,10 +36,6 @@ export async function assignEe(data: Assign) {
 
 // employee's page
 
-export async function getScheduleById(id: number) {
-  return await db('jobs').where('employee_id', id)
-}
-
 export async function getTask(employeeId: number, jobId: number) {
   return await db('jobs')
     .where('employee_id', employeeId)

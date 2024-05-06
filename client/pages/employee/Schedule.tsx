@@ -1,11 +1,11 @@
-import { useGetScheduleById } from '../../hooks/useJobs'
+import { useGetSchedule } from '../../hooks/useEmployees'
 import { Link, useParams } from 'react-router-dom'
 import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 import MapMarker from '../../components/MapMarker'
 
 function Schedule() {
   const { id } = useParams()
-  const { data, isLoading, isError, error } = useGetScheduleById(Number(id))
+  const { data, isLoading, isError, error } = useGetSchedule(Number(id))
   if (isLoading) {
     return <p>Loading...</p>
   }

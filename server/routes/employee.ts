@@ -1,14 +1,15 @@
 import { Router } from 'express'
 import * as db from '../db/jobs.ts'
+import { getSchedule } from '../db/employee.ts'
 
 const router = Router()
 
-router.get('/:id', async (req, res) => {
+router.get('/:id/schedule', async (req, res) => {
   try {
     const { id } = req.params
-    const job = await db.getScheduleById(Number(id))
+    const schedule = await getSchedule(Number(id))
 
-    res.json(job)
+    res.json(schedule)
   } catch (error) {
     res.status(500).json({ message: 'Something went wrong' })
   }
@@ -36,4 +37,5 @@ router.patch('/:employeeId/:jobId', async (req, res) => {
   }
 })
 
+router.get('')
 export default router

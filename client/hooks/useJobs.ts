@@ -60,13 +60,6 @@ export function useAssignEe() {
 }
 // employee's page
 
-export function useGetScheduleById(id: number) {
-  return useQuery({
-    queryKey: ['schedule'],
-    queryFn: () => api.getScheduleById(id),
-  })
-}
-
 export function useTask(employeeId: number, jobId: number) {
   return useQuery({
     queryKey: ['task'],

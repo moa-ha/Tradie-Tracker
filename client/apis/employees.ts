@@ -8,3 +8,12 @@ export async function getEmployees(): Promise<Employee[]> {
   const res = await request.get(`${rootUrl}/manager`)
   return res.body.employees as Employee[]
 }
+
+export async function getSchedule(id: number) {
+  const res = await request.get(`${rootUrl}/employee/${id}/schedule`)
+  return res.body
+}
+
+// export async function getEmployeeById(id: number) {
+//   const res = await request.get()
+// }
