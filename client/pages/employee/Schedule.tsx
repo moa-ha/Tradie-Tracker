@@ -14,20 +14,21 @@ function Schedule() {
   }
 
   if (data) {
+    console.log(data)
+
     return (
       <>
         <EmployeeNavBar />
         <div className="layout-jobList">
           <div className="left-content">
             <h1>Current jobs:</h1>
-
             {data.map((job) => (
               <div className="job-card" key={job.id}>
                 <div className="title">{job.title}</div>
                 <div>{job.date}</div>
                 <div>{job.time}</div>
                 <div className="location">{job.location || 'Address'}</div>
-                <Link to={`/employee/${id}/${job.id}`}>
+                <Link to={`/employee/${id}/${job.jobId}`}>
                   <button>Submit Completion</button>
                 </Link>
               </div>
