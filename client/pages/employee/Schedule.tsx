@@ -14,8 +14,6 @@ function Schedule() {
   }
 
   if (data) {
-    console.log(data)
-
     return (
       <>
         <EmployeeNavBar />
