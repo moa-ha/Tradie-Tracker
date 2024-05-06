@@ -1,9 +1,19 @@
 import { Router } from 'express'
 import * as db from '../db/jobs.ts'
-import { getSchedule } from '../db/employee.ts'
+import { getSchedule, getEmployee } from '../db/employee.ts'
 
 const router = Router()
 
+router.get('/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const employee = await getEmployee(Number(id))
+    res.json(employee)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
 router.get('/:id/schedule', async (req, res) => {
   try {
     const { id } = req.params

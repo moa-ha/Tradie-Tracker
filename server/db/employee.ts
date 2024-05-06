@@ -26,6 +26,6 @@ export async function getSchedule(id: number) {
       'jobs.manager_id as manager',
     )
 }
-export async function getEeById(id: number) {
+export async function getEmployee(id: number) {
   return await db('employees').where({ id })
 }
