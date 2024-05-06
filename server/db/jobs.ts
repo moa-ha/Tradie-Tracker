@@ -1,5 +1,5 @@
 import db from './connection'
-import { JobData, Job } from '../../models/jobs'
+import { JobData, Job, Assign } from '../../models/jobs'
 
 //manager's page
 export async function getJobs() {
@@ -26,6 +26,12 @@ export async function editJob(data: Job) {
 
 export async function addJobs(data: JobData) {
   return await db('jobs').insert(data)
+}
+
+export async function assignEe(data: Assign) {
+  await db('jobs')
+    .where('id', data.id)
+    .update({ employee_id: data.employee_id })
 }
 
 // employee's page

@@ -16,3 +16,8 @@ export interface JobData {
 export interface Job extends JobData {
   id: number
 }
+
+export interface Assign {
+  id: number
+  employee_id: number
+}

@@ -84,4 +84,14 @@ router.post('/', async (req, res) => {
   }
 })
 
+router.patch('/:id', async (req, res) => {
+  try {
+    await db.assignEe(req.body)
+    res.sendStatus(204)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(500)
+  }
+})
+
 export default router

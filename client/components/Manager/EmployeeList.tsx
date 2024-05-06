@@ -25,11 +25,13 @@ function EmployeeList() {
           {data.map((employee) => (
             <option key={employee.id} value={employee.id}>
               {employee.name}
+              <Assign id={employee.id} />
             </option>
           ))}
         </select>
 
-        <Assign id={setSelectedEmployee.id} />
+        {/* <Assign id={setSelectedEmployee.id} /> */}
+        <Assign id={Number(1)} />
       </>
     )
   }
