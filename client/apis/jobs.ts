@@ -1,6 +1,5 @@
 import request from 'superagent'
-import { Job, JobData } from '../../models/jobs'
-import { Employee } from '../../models/employees'
+import { Assign, Job, JobData } from '../../models/jobs'
 
 const rootUrl = '/api/v1/'
 
@@ -34,9 +33,10 @@ export async function getCompletedJobs() {
   return res.body as Job[]
 }
 
-// export async function assignEmployee(){
-
-// }
+export async function assignEe(input: Assign) {
+  const id = input.id
+  await request.patch(`${rootUrl}/manager/${id}`).send(input)
+}
 
 // for employees
 export async function getScheduleById(id: number) {
