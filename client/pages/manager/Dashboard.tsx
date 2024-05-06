@@ -37,7 +37,7 @@ function Dashboard() {
                   </Link>
                 </div>
                 <div>
-                  <EmployeeList />
+                  <EmployeeList jobId={job.id} />
                 </div>
                 <ToggleButton job={job} />
               </div>

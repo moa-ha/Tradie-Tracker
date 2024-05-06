@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import { FormEvent, MouseEventHandler, useState } from 'react'
 import { useEmployees } from '../../hooks/useEmployees'
-import Assign from './Assign'
+import { useAssignEe } from '../../hooks/useJobs'
+import { Assign } from '../../../models/jobs'
 
-function EmployeeList() {
+function EmployeeList({ id }: Assign) {
+  // bring employee list
   const { data, isLoading, isError, error } = useEmployees()
-  const [selectedEmployee, setSelectedEmployee] = useState<number | null>(null)
+  const [selectedEmployee, setSelectedEmployee] = useState({
+    id: id,
+    employee_id: 0,
+  })
+
+  const mutation = useAssignEe()
 
   if (isLoading) {
     return <p>Loading...</p>
@@ -12,26 +19,40 @@ function EmployeeList() {
   if (isError) {
     return <p>Error: {error?.message}</p>
   }
+
+  const handleEmployeeChange = (e: { target: { value: string } }) => {
+    console.log('id from jobcard: ' + id)
+    setSelectedEmployee((prev) => ({
+      ...prev,
+      employee_id: parseInt(e.target.value),
+    }))
+  }
+
+  const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault()
+    mutation.mutate(selectedEmployee)
+  }
+
   if (data) {
     console.log(data)
 
     return (
       <>
-        {/* Dropdown to select employee */}
         <select
-          // value={selectedEmployee ?? data.id}
-          onChange={(e) => setSelectedEmployee(parseInt(e.target.value))}
+          value={selectedEmployee.employee_id ?? ''}
+          onChange={handleEmployeeChange}
         >
+          <option value="">Select an employee</option>
           {data.map((employee) => (
             <option key={employee.id} value={employee.id}>
               {employee.name}
-              <Assign id={employee.id} />
             </option>
           ))}
         </select>
-
-        {/* <Assign id={setSelectedEmployee.id} /> */}
-        <Assign id={Number(1)} />
+        {console.log(selectedEmployee)}
+        <button onClick={handleClick} className="dashboard-btn">
+          ✔️
+        </button>
       </>
     )
   }
