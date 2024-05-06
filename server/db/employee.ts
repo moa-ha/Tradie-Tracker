@@ -27,5 +27,5 @@ export async function getSchedule(id: number) {
     )
 }
 export async function getEmployee(id: number) {
-  return await db('employees').where({ id })
+  return await db('employees').where({ id }).first()
 }

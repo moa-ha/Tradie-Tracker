@@ -13,9 +13,6 @@ function ToggleButton({ job }: Props) {
     setIsShow(!isShow)
   }
 
-  const { data } = useEmployees()
-  console.log(data)
-
   return (
     <>
       <button onClick={handleToggle} className="dashboard-btn">
@@ -33,7 +30,7 @@ function ToggleButton({ job }: Props) {
           {/* {if(job.employee_id !==0) {
              return <div>Assigned</div>
             }} */}
-          <AssignedEe />
+          <AssignedEe id={job.employee_id} />
           {/* {job.employee_id !== 0
               ? `Assigned ${job.employee_id}`
               : 'Not yet assigned employee'}

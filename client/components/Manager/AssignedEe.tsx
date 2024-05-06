@@ -1,8 +1,17 @@
-import { useEmployees } from '../../hooks/useEmployees'
+import { useEmployee, useEmployees } from '../../hooks/useEmployees'
 
-function AssignedEe() {
-  const { data } = useEmployees()
-  return <div> Assigned "James"</div>
+interface Id {
+  id: number
+}
+function AssignedEe({ id }: Id) {
+  const { data } = useEmployee(id)
+  console.log('id from togglebutton? ' + id)
+
+  if (data) {
+    console.log(data)
+
+    return <div> Assigned {data.name}</div>
+  }
 }
 
 export default AssignedEe

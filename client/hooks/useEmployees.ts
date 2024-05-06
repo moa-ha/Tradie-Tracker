@@ -15,6 +15,13 @@ export function useEmployees() {
   })
 }
 
+export function useEmployee(id: number) {
+  return useQuery({
+    queryKey: ['employee'],
+    queryFn: () => api.getEmployee(id),
+  })
+}
+
 export function useGetSchedule(id: number) {
   return useQuery({
     queryKey: ['schedule'],
