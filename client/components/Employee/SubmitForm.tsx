@@ -1,7 +1,4 @@
-// SubmitJobForm.tsx
 import { FormEvent, useState } from 'react'
-// import { EditJob, Job } from '../../../models/jobs'
-// import { useEditJobByEmpId } from '../../hooks/useJobs'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Job } from '../../../models/jobs'
 import { useSubmitJob } from '../../hooks/useJobs'

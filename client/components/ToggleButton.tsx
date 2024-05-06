@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Job } from '../../models/jobs'
+import { useEmployees } from '../hooks/useEmployees'
+import AssignedEe from './Manager/AssignedEe'
 
 interface Props {
   job: Job
@@ -10,6 +12,7 @@ function ToggleButton({ job }: Props) {
   function handleToggle() {
     setIsShow(!isShow)
   }
+
   return (
     <>
       <button onClick={handleToggle} className="dashboard-btn">
@@ -23,6 +26,8 @@ function ToggleButton({ job }: Props) {
           </div>
           <div className="quotation">Quotation: ${job.quotation}</div>
           <div className="complete">Complete? {job.complete ? '⭕️' : '❌'}</div>
+
+          <AssignedEe id={job.employee_id} />
         </p>
       )}
     </>

@@ -5,7 +5,7 @@ import {
   MutationFunction,
 } from '@tanstack/react-query'
 import * as api from '../apis/jobs'
-import { Job, JobData } from '../../models/jobs'
+import { Assign, Job, JobData } from '../../models/jobs'
 
 // manager's page
 
@@ -51,14 +51,14 @@ export function useCompletedJobs() {
   })
 }
 
-// employee's page
-
-export function useGetScheduleById(id: number) {
-  return useQuery({
-    queryKey: ['schedule'],
-    queryFn: () => api.getScheduleById(id),
+export function useAssignEe() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: (input: Assign) => api.assignEe(input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['assignEe'] }),
   })
 }
+// employee's page
 
 export function useTask(employeeId: number, jobId: number) {
   return useQuery({
