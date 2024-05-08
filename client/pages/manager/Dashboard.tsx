@@ -4,8 +4,9 @@ import { useJobs } from '../../hooks/useJobs'
 import DeleteButton from '../../components/Manager/DeleteButton'
 // import MapMarker from '../../components/MapMarker'
 import ManagerNavbar from '../../components/Manager/ManagerNavBar'
-import EmployeeList from '../../components/Manager/EmployeeList'
+import Assign from '../../components/Manager/Assign'
 import map from '../../styles/images/map.png'
+import AssignedEe from '../../components/Manager/AssignedEe'
 
 function Dashboard() {
   const { data, isLoading, isError, error } = useJobs()
@@ -37,7 +38,9 @@ function Dashboard() {
                   </Link>
                 </div>
                 <div>
-                  <EmployeeList id={job.id} />
+                  <Assign id={job.id} />
+                  <br></br>
+                  <AssignedEe id={job.employee_id} />
                 </div>
                 <ToggleButton job={job} />
               </div>

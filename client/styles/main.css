@@ -281,6 +281,10 @@ link {
   float: right;
 }
 
+.assigned-ee {
+  font-style: italic;
+}
+
 /* Job Detail after show-more */
 
 .job-detail {

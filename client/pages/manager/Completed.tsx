@@ -41,6 +41,7 @@ function Completed() {
             <div className="job-card" key={job.id}>
               <div className="title">{job.title}</div>
               <div>{job.date}</div>
+              <div>Working hours: {job.manhour}</div>
               <div className="review">{job.review}</div>
               <div className="location">{job.location || 'Address'}</div>
             </div>

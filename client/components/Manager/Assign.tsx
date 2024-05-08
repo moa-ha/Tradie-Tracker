@@ -5,7 +5,7 @@ import { useAssignEe } from '../../hooks/useJobs'
 interface Id {
   id: number
 }
-function EmployeeList({ id }: Id) {
+function Assign({ id }: Id) {
   // bring employee list
   const { data, isLoading, isError, error } = useEmployees()
   const [selectedEmployee, setSelectedEmployee] = useState({
@@ -30,7 +30,7 @@ function EmployeeList({ id }: Id) {
   }
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     mutation.mutate(selectedEmployee)
     alert(`Successfully assigned.`)
   }
@@ -58,4 +58,4 @@ function EmployeeList({ id }: Id) {
   }
 }
 
-export default EmployeeList
+export default Assign

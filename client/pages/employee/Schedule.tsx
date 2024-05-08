@@ -20,7 +20,7 @@ function Schedule() {
         <EmployeeNavBar />
         <div className="layout-jobList">
           <div className="left-content">
-            <h1>Current jobs:</h1>
+            <h1>Schedule:</h1>
             {data.map((job) => (
               <div className="job-card" key={job.id}>
                 <div className="title">{job.title}</div>
