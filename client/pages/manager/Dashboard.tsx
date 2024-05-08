@@ -42,7 +42,6 @@ function Dashboard() {
                   <br></br>
                   <AssignedEe id={job.employee_id} />
                 </div>
-
                 <ToggleButton job={job} />
               </div>
             ))}
