@@ -28,7 +28,7 @@ export async function seed(knex) {
       time: '15:00',
       complete: true,
       quotation: 100,
-      manhour: 2,
+      manhour: 5,
       review:
         'It took 3 more hours for traffic getting the part from west storage.',
       employee_id: 1,

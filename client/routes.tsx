@@ -1,12 +1,12 @@
 import { createRoutesFromElements, Route } from 'react-router-dom'
-import Dashboard from './Pages/manager/Dashboard.tsx'
-import JobDetail from './Pages/manager/JobDetail.tsx'
-import CreateJob from './Pages/manager/CreateJob.tsx'
-import Completed from './Pages/manager/Completed.tsx'
-import Home from './Pages/Home.tsx'
-import Schedule from './Pages/employee/Schedule.tsx'
-import Submit from './Pages/employee/Submit.tsx'
-import Login from './Pages/employee/Login.tsx'
+import Dashboard from './pages/manager/Dashboard.tsx'
+import JobDetail from './pages/manager/JobDetail.tsx'
+import CreateJob from './pages/manager/CreateJob.tsx'
+import Completed from './pages/manager/Completed.tsx'
+import Home from './pages/Home.tsx'
+import Schedule from './pages/employee/Schedule.tsx'
+import Submit from './pages/employee/Submit.tsx'
+import Login from './pages/employee/Login.tsx'
 
 export default createRoutesFromElements(
   <Route>
