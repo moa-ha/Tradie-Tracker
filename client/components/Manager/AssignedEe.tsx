@@ -10,7 +10,7 @@ function AssignedEe({ id }: Id) {
   if (data && data.id == id) {
     console.log(data)
 
-    return <div> Assigned {data.name}</div>
+    return <span className="assigned-ee"> Assigned {data.name}</span>
   }
 }
 
