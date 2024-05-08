@@ -1,7 +1,8 @@
 import { useGetSchedule } from '../../hooks/useEmployees'
 import { Link, useParams } from 'react-router-dom'
 import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
-import MapMarker from '../../components/MapMarker'
+// import MapMarker from '../../components/MapMarker'
+import map from '../../styles/images/map_employee1.png'
 
 function Schedule() {
   const { id } = useParams()
@@ -32,7 +33,13 @@ function Schedule() {
               </div>
             ))}
           </div>
-          <MapMarker locations={[]} />
+          {/* <MapMarker locations={[]} /> */}
+          <img
+            id="map"
+            style={{ width: '500px', height: '500px' }}
+            alt="logo"
+            src={map}
+          ></img>
         </div>
       </>
     )
