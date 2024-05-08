@@ -30,7 +30,7 @@ function Assign({ id }: Id) {
   }
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
-    // e.preventDefault()
+    e.preventDefault()
     mutation.mutate(selectedEmployee)
     alert(`Successfully assigned.`)
   }

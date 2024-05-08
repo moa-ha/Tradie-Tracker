@@ -12,7 +12,7 @@ function Home() {
         <Link to="/manager">
           <button className="manager login-button">Manager</button>
         </Link>
-        <Link to="/login">
+        <Link to="/employee/1/schedule">
           <button className="employee login-button">Employee</button>
         </Link>
         <Outlet />
