@@ -6,8 +6,18 @@ const rootUrl = '/api/v1/'
 //for managers
 
 export async function getJobs(): Promise<Job[]> {
-  const res = await request.get(`${rootUrl}/manager`)
-  return res.body.jobs as Job[]
+  try {
+    const res = await request.get(`${rootUrl}/manager`)
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch dta ${res.status}: ${res.error}`)
+    }
+    // const res = await request.get(`${rootUrl}/manager`)
+    return res.body.jobs as Job[]
+  } catch (error) {
+    console.error('Erorr fetching data')
+    throw new Error(`Failed to fetch data!!!`)
+  }
 }
 
 export async function getJobById(id: number) {
