@@ -15,7 +15,7 @@ function Dashboard() {
     return <p>Loading...</p>
   }
   if (isError) {
-    return <p>Error: {error?.message}</p>
+    return <p>Error: getting error! {error?.message}</p>
   }
 
   if (data) {
