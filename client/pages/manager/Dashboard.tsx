@@ -39,8 +39,8 @@ function Dashboard() {
                 </div>
                 <div>
                   <Assign id={job.id} />
-                  <br></br>
-                  <AssignedEe id={job.employee_id} />
+                  {/* <br></br>
+                  <AssignedEe id={job.employee_id} /> */}
                 </div>
                 <ToggleButton job={job} />
               </div>

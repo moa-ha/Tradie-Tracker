@@ -14,10 +14,10 @@ function CreateJob() {
   }
 
   return (
-    <>
+    <div className="center">
       <ManagerNavbar />
       {/* Occurring Client checkbox */}
-      <label>
+      <label className="create-form">
         Occurring Client
         <input
           type="checkbox"
@@ -30,7 +30,7 @@ function CreateJob() {
       {occurringClient && <OccurringClient />}
       {!occurringClient && <NewClient />}
       <NewJob />
-    </>
+    </div>
   )
 }
 

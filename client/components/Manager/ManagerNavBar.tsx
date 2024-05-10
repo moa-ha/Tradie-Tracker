@@ -23,15 +23,15 @@ function ManagerNavbar() {
           <Link to={`/manager/create`}>
             <img className="nav-icon" alt="plus-icon" src={plus}></img>
           </Link>
-          <Link to={`/notifications`}>
+          {/* <Link to={`/notifications`}>
             <img className="nav-icon" alt="notify-icon" src={notify}></img>
-          </Link>
+          </Link> */}
           <Link to={`/manager/completed`}>
             <img className="nav-icon" alt="complete-icon" src={complete}></img>
           </Link>
-          <Link to={`/manager/:id/profile`}>
+          {/* <Link to={`/manager/:id/profile`}>
             <img className="nav-icon" alt="profile-icon" src={profile}></img>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

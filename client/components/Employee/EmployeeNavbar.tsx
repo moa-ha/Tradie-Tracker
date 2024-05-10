@@ -18,10 +18,10 @@ function EmployeeNavBar() {
             <h1 className="h1-nav">Tradie Tracker</h1>
           </Link>
         </div>
-        <div className="icon-container">
+        {/* <div className="icon-container">
           <img className="nav-icon" alt="notify-icon" src={notify}></img>
           <img className="nav-icon" alt="profile-icon" src={profile}></img>
-        </div>
+        </div> */}
       </div>
     </div>
   )

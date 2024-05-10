@@ -6,6 +6,15 @@
   margin: 20px;
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
+.create-form {
+  font-size: large;
+  font-weight: bold;
+}
 .layout {
   display: flex;
   flex-direction: column;
