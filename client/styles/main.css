@@ -107,9 +107,7 @@ link {
 /* Welcome page */
 /* ----------------------------------------------------- */
 /* heading container */
-.header {
-  align-items: center;
-}
+
 .welcome-heading {
   font-size: 4rem;
   align-items: center;
