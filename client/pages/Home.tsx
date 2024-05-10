@@ -2,9 +2,11 @@ import { Link, Outlet } from 'react-router-dom'
 
 function Home() {
   return (
-    <>
+    <div className="home">
       <div className="header">
         <h1 className="welcome-heading">Welcome to Tradie Tracker!</h1>
+        <br></br>
+        <br></br>
         <h2 className="welcome-text">Hammering Out Efficiency</h2>
       </div>
       <h3 className="I-am-text">I am:</h3>
@@ -17,7 +19,7 @@ function Home() {
         </Link>
         <Outlet />
       </div>
-    </>
+    </div>
   )
 }
 

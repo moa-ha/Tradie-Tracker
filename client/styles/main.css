@@ -2,6 +2,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.home {
+  margin: 20px;
+  text-align: center;
+}
 .layout {
   display: flex;
   flex-direction: column;
