@@ -21,7 +21,7 @@ function Dashboard() {
   if (data) {
     return (
       <>
-        <ManagerNavbar />
+        {/* <ManagerNavbar /> */}
         <div className="layout-jobList">
           <div className="left-content">
             <h1>Job Dashboard</h1>

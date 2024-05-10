@@ -7,9 +7,10 @@ import Home from './pages/Home.tsx'
 import Schedule from './pages/employee/Schedule.tsx'
 import Submit from './pages/employee/Submit.tsx'
 import Login from './pages/employee/Login.tsx'
+import Layout from './pages/Layout.tsx'
 
 export default createRoutesFromElements(
-  <Route>
+  <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
     <Route path="/manager" element={<Dashboard />} />
     <Route path="/manager/:id" element={<JobDetail />} />

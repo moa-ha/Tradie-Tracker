@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom'
 import Welcome from '../components/Welcome'
 
 function Home() {
@@ -11,7 +10,6 @@ function Home() {
       <h3 className="I-am-text">I am:</h3>
       <main className="welcome">
         <Welcome />
-        <Outlet />
       </main>
     </div>
   )
