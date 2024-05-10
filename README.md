@@ -7,6 +7,10 @@ This project is from group project from Dev Academy, and I am remaking from the 
 
 Use backend and frontend routes to save and filter data.
 
+## Demo
+
+<img src="./client/styles/wireframe/tradie-tracker.gif" alt="Demo Image" style="width: 500px; height: auto;">
+
 ## Role
 
 * Front-end routing
@@ -47,7 +51,7 @@ Media query screen
 
 ## Stretch Goal
 
-Google map api implementation<br>
-<img src="./client/styles/wireframe/wireframe(1).png" alt="Example Image" style="width: 500px; height: auto;">
+Google map api implementation for manager to create a job-card by turning string address into latitude & longitude to mark on the map (currently working by hardcoded address)<br>
+<img src="./client/styles/wireframe/mapmarker.gif" alt="stretch Image" style="width: 500px; height: auto;">
 
 
