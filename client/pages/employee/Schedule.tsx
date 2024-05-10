@@ -1,6 +1,5 @@
 import { useGetSchedule } from '../../hooks/useEmployees'
 import { Link, useParams } from 'react-router-dom'
-import EmployeeNavBar from '../../components/Employee/EmployeeNavbar'
 // import MapMarker from '../../components/MapMarker'
 import map from '../../styles/images/map_employee1.png'
 
@@ -17,7 +16,6 @@ function Schedule() {
   if (data) {
     return (
       <>
-        <EmployeeNavBar />
         <div className="layout-jobList">
           <div className="left-content">
             <h1>Schedule:</h1>

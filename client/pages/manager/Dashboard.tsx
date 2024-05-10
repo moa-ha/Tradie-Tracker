@@ -3,7 +3,6 @@ import ToggleButton from '../../components/ToggleButton'
 import { useJobs } from '../../hooks/useJobs'
 import DeleteButton from '../../components/Manager/DeleteButton'
 // import MapMarker from '../../components/MapMarker'
-import ManagerNavbar from '../../components/Manager/ManagerNavBar'
 import Assign from '../../components/Manager/Assign'
 import map from '../../styles/images/map.png'
 import AssignedEe from '../../components/Manager/AssignedEe'
@@ -21,7 +20,6 @@ function Dashboard() {
   if (data) {
     return (
       <>
-        {/* <ManagerNavbar /> */}
         <div className="layout-jobList">
           <div className="left-content">
             <h1>Job Dashboard</h1>
