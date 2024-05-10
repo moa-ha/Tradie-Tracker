@@ -14,9 +14,9 @@ function Submit() {
 
   if (data) {
     return (
-      <>
+      <div className="layout">
         <SubmitForm data={data} />
-      </>
+      </div>
     )
   }
 }

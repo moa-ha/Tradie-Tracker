@@ -16,11 +16,9 @@ function JobDetail() {
 
   if (data && data.id == id) {
     return (
-      <>
-        <div className="layout">
-          <Form {...{ data }} />
-        </div>
-      </>
+      <div className="layout">
+        <Form {...{ data }} />
+      </div>
     )
   }
 }
