@@ -13,7 +13,6 @@ export async function getJobs(): Promise<Job[]> {
     if (!res.ok) {
       throw new Error(`Failed to fetch dta ${res.status}: ${res.error}`)
     }
-    // const res = await request.get(`${rootUrl}/manager`)
     return res.body.jobs as Job[]
   } catch (error) {
     console.error('Erorr fetching data')
