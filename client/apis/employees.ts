@@ -1,6 +1,6 @@
 import request from 'superagent'
 import { Employee } from '../../models/employees'
-const rootUrl = '/api/v1/'
+const rootUrl = '/api/v1'
 
 // to assign employee to each job
 
