@@ -1,7 +1,6 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-// import fruitRoutes from './routes/fruits.ts'
 import manager from './routes/manager'
 import employee from './routes/employee'
 

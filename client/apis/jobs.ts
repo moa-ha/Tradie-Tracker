@@ -1,7 +1,6 @@
 import request from 'superagent'
 import { Assign, Job, JobData } from '../../models/jobs'
 
-// const rootUrl = 'https://tradie-tracker.devacademy.nz/'
 const rootUrl = '/api/v1/'
 
 //for managers
