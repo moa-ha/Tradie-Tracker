@@ -1,7 +1,7 @@
 # Tradie-Trackeer
 
 <b>Efficient Work Scheduling App.</b><br>
-This project is from group project from Dev Academy, and I am remaking from the scratch to consolidate the concepts and make clear code. The idea was to make a scheduling app using all the tools including front & backend skills we've learnt throughout the bootcamp, and I took a front-end lead.
+This project is from group project from Dev Academy, and I am remaking from the scratch to consolidate the concepts and make clear code. The idea was to make a scheduling app using all the tools including front & backend skills we've learnt throughout the bootcamp, and I took a front-end lead for api calls and hooks.
 
 ### Goal
 
@@ -18,7 +18,7 @@ Live: https://tradie-tracker.pushed.nz/ <br>
 * Component management
 * Naming functions 
 
-### While rearranging...
+### Refactor the code from scratch, making it more readable and maintainable
 
 * matched front & backend routing and function names
 * rearranged Pages & Components
@@ -44,6 +44,7 @@ Live: https://tradie-tracker.pushed.nz/ <br>
 * JavaScript
 * React
 * Knex
+* Express.js
 * SQLite3
 
 ## To be improved
