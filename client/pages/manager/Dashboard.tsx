@@ -31,7 +31,9 @@ function Dashboard() {
                 <div>
                   <DeleteButton id={job.id} />
                   <Link to={`/manager/${job.id}`}>
-                    <button className="dashboard-btn">Check Detail</button>
+                    <button className="dashboard-btn">
+                      Check or Edit Detail
+                    </button>
                   </Link>
                 </div>
                 <div>
