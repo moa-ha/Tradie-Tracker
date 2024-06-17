@@ -37,82 +37,81 @@ function SubmitForm(data: Props) {
 
   return (
     <>
-      <div className="job-card">
-        <form onSubmit={handleSubmit}>
-          Job Title:
-          <input
-            value={received.title}
-            readOnly
-            className="read-only"
-            type="text"
-            name="title"
-          />
-          Location:
-          <input
-            value={received.location}
-            readOnly
-            className="read-only"
-            type="text"
-            name="location"
-          />
-          Date:
-          <input
-            value={received.date}
-            readOnly
-            className="read-only"
-            type="text"
-            name="date"
-          />
-          <p>How did it go?</p>
-          <textarea
-            className="display-size"
-            onChange={(e) =>
-              setFormState({ ...formState, review: e.target.value })
-            }
-            // value={formState.review}
-            name="review"
-            placeholder="Enter review or add more job detail"
-          />
-          <br />
-          Worked Hours:
-          <input
-            onChange={handleChange}
-            value={formState.manhour}
-            type="number"
-            name="manhour"
-            placeholder="Enter worked hours"
-          />
-          <br />
-          {/* New radio button for job completion */}
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="complete"
-                value="true"
-                checked={formState.complete === true}
-                onChange={handleRadioChange}
-              />
-              Complete
-            </label>
-          </div>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="complete"
-                value="false"
-                checked={formState.complete === false}
-                onChange={handleRadioChange}
-              />
-              Incomplete
-            </label>
-          </div>
-          {/* End of radio button */}
-          <br />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit}>
+        Job Title:
+        <input
+          value={received.title}
+          readOnly
+          className="read-only"
+          type="text"
+          name="title"
+        />
+        <br></br>
+        Location:
+        <input
+          value={received.location}
+          readOnly
+          className="read-only"
+          type="text"
+          name="location"
+        />
+        <br></br>
+        Date:
+        <input
+          value={received.date}
+          readOnly
+          className="read-only"
+          type="text"
+          name="date"
+        />
+        <p>How did it go?</p>
+        <textarea
+          className="display-size"
+          onChange={(e) =>
+            setFormState({ ...formState, review: e.target.value })
+          }
+          name="review"
+          placeholder="Enter review or add more job detail"
+        />
+        <br />
+        Worked Hours:
+        <input
+          onChange={handleChange}
+          value={formState.manhour}
+          type="number"
+          name="manhour"
+          placeholder="Enter worked hours"
+        />
+        <br />
+        {/* New radio button for job completion */}
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="complete"
+              value="true"
+              checked={formState.complete === true}
+              onChange={handleRadioChange}
+            />
+            Complete
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="complete"
+              value="false"
+              checked={formState.complete === false}
+              onChange={handleRadioChange}
+            />
+            Incomplete
+          </label>
+        </div>
+        {/* End of radio button */}
+        <br />
+        <button type="submit">Submit</button>
+      </form>
     </>
   )
 }
