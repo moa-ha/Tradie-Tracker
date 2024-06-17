@@ -1,5 +1,5 @@
 import db from './connection'
-import { JobData, Job, Assign } from '../../models/jobs'
+import { JobData, Job, Assign, SubmitJob } from '../../models/jobs'
 
 //manager's page
 export async function getJobs() {
@@ -42,6 +42,7 @@ export async function getTask(employeeId: number, jobId: number) {
     .andWhere('id', jobId)
     .first()
 }
-export async function submitJob(input: Job) {
-  return await db('jobs').where('id', input.id).update(input)
+export async function submitJob(input: SubmitJob) {
+  const id = input.id
+  return await db('jobs').where({ id }).update(input)
 }

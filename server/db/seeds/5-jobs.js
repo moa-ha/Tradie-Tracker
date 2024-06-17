@@ -29,7 +29,7 @@ export async function seed(knex) {
       complete: true,
       quotation: 100,
       manhour: 2,
-      review: 'good',
+      review: 'It took longer than scheduled for getting parts from near shop',
       employee_id: 1,
       client_id: 2,
       manager_id: 1,

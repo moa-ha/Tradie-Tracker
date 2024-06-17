@@ -37,15 +37,4 @@ router.get('/:employeeId/:jobId', async (req, res) => {
   }
 })
 
-router.patch('/:employeeId/:jobId', async (req, res) => {
-  try {
-    await db.submitJob(req.body)
-    res.sendStatus(204)
-  } catch (error) {
-    console.error(error)
-    res.sendStatus(500)
-  }
-})
-
-router.get('')
 export default router

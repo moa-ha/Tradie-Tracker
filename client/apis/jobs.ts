@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { Assign, Job, JobData } from '../../models/jobs'
+import { Assign, Job, JobData, SubmitJob } from '../../models/jobs'
 
 const rootUrl = '/api/v1'
 
@@ -20,7 +20,7 @@ export async function getJobs(): Promise<Job[]> {
 }
 
 export async function getJobById(id: number) {
-  const res = await request.get(`${rootUrl}/manager/${id}`)
+  const res = await request.get(`${rootUrl}/jobs/${id}`)
   return res.body
 }
 
@@ -54,8 +54,7 @@ export async function getTask(employeeId: number, jobId: number) {
   return res.body
 }
 
-export async function submitJob(input: Job) {
-  const employeeId = input.employee_id
-  const jobId = input.id
-  await request.patch(`${rootUrl}/employee/${employeeId}/${jobId}`).send(input)
+export async function submitJob(input: SubmitJob) {
+  const id = input.id
+  await request.patch(`${rootUrl}/jobs/${id}`).send(input)
 }

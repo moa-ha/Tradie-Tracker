@@ -1,11 +1,6 @@
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  MutationFunction,
-} from '@tanstack/react-query'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import * as api from '../apis/jobs'
-import { Assign, Job, JobData } from '../../models/jobs'
+import { Assign, Job, JobData, SubmitJob } from '../../models/jobs'
 
 // manager's page
 
@@ -67,11 +62,10 @@ export function useTask(employeeId: number, jobId: number) {
   })
 }
 export function useSubmitJob() {
-  // const input = { empId, jobId, data }
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: (input: Job) => api.submitJob(input),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ['submit'] }),
+    mutationFn: (input: SubmitJob) => api.submitJob(input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['jobs'] }),
   })
 }
 // export function useFruitsMutation<TData = unknown, TVariables = unknown>(

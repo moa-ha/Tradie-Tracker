@@ -6,6 +6,10 @@ import map from '../../styles/images/map_employee1.png'
 function Schedule() {
   const { id } = useParams()
   const { data, isLoading, isError, error } = useGetSchedule(Number(id))
+  if (data) {
+    console.log('jobId from schedule comp: ' + data[0].jobId)
+  }
+
   if (isLoading) {
     return <p>Loading...</p>
   }
@@ -20,12 +24,12 @@ function Schedule() {
           <div className="left-content">
             <h1>Schedule:</h1>
             {data.map((job) => (
-              <div className="job-card" key={job.id}>
+              <div className="job-card" key={job.jobId}>
                 <div className="title">{job.title}</div>
                 <div>{job.date}</div>
                 <div>{job.time}</div>
                 <div className="location">{job.location || 'Address'}</div>
-                <Link to={`/employee/${id}/${job.jobId}`}>
+                <Link to={`/jobs/${job.jobId}`}>
                   <button>Submit Completion</button>
                 </Link>
               </div>

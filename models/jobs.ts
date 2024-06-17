@@ -21,3 +21,10 @@ export interface Assign {
   id: number
   employee_id: number
 }
+
+export interface SubmitJob {
+  id: number
+  manhour: number
+  review: string
+  complete: boolean
+}
