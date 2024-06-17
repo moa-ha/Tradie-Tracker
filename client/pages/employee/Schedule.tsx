@@ -6,9 +6,6 @@ import map from '../../styles/images/map_employee1.png'
 function Schedule() {
   const { id } = useParams()
   const { data, isLoading, isError, error } = useGetSchedule(Number(id))
-  if (data) {
-    console.log('jobId from schedule comp: ' + data[0].jobId)
-  }
 
   if (isLoading) {
     return <p>Loading...</p>

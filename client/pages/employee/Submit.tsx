@@ -4,7 +4,6 @@ import { useJobById } from '../../hooks/useJobs'
 
 function Submit() {
   const id = Number(useParams().id)
-  console.log('getting id correct: ' + id)
 
   const { data, isError, error } = useJobById(id)
 
