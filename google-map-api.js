@@ -1,4 +1,6 @@
 const API_KEY = 'AIzaSyB0q03ikdRgizYvqVG0gge7-RFspBqNYEE'
+const REGION = 'NZ'
+const LANG = 'en'
 
 ;((g) => {
   var h,
@@ -37,7 +39,8 @@ const API_KEY = 'AIzaSyB0q03ikdRgizYvqVG0gge7-RFspBqNYEE'
 })({
   key: API_KEY,
   v: 'weekly',
-
+  region: REGION,
+  language: LANG,
   // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
   // Add other bootstrap parameters as needed, using camel case.
 })
