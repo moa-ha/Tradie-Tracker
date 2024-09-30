@@ -18,8 +18,8 @@ const LANG = 'en'
     e = new URLSearchParams(),
     u = () =>
       h ||
-      (h = new Promise(async (f, n) => {
-        await (a = m.createElement('script'))
+      (h = new Promise((resolve, reject) => {
+        a = m.createElement('script')
         e.set('libraries', [...r] + '')
         for (k in g)
           e.set(
@@ -28,8 +28,8 @@ const LANG = 'en'
           )
         e.set('callback', c + '.maps.' + q)
         a.src = `https://maps.${c}apis.com/maps/api/js?` + e
-        d[q] = f
-        a.onerror = () => (h = n(Error(p + ' could not load.')))
+        d[q] = resolve
+        a.onerror = () => (h = reject(Error(p + ' could not load.')))
         a.nonce = m.querySelector('script[nonce]')?.nonce || ''
         m.head.append(a)
       }))
@@ -41,6 +41,4 @@ const LANG = 'en'
   v: 'weekly',
   region: REGION,
   language: LANG,
-  // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-  // Add other bootstrap parameters as needed, using camel case.
 })
