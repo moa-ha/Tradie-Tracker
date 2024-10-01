@@ -1,6 +1,8 @@
+/// <reference types="@types/google.maps" />
+
 import { useEffect } from 'react'
+
 const MapMarker = () => {
-  const mapId = '9e8c71bfe65128e1'
   useEffect(() => {
     const loadMap = async () => {
       // Google Maps API를 동적으로 로드합니다.
@@ -11,19 +13,32 @@ const MapMarker = () => {
         'marker',
       )) as google.maps.MarkerLibrary
 
-      const position = { lat: -36.7660918, lng: 174.7267817 } // Auckland 위치
+      // hardcoded locations
+      const position = [
+        { lat: -36.7660918, lng: 174.7267817 },
+        { lat: -36.7716377, lng: 174.713434 },
+        { lat: -36.8827032, lng: 174.6331554 },
+        { lat: -36.7705578, lng: 174.7275945 },
+        { lat: -36.851687, lng: 174.7832322 },
+        { lat: -36.9383626, lng: 174.652653 },
+        { lat: -36.8786769, lng: 174.8361916 },
+        { lat: -36.9096579, lng: 174.6610737 },
+        { lat: 36.9111394, lng: 174.6103638 },
+      ]
 
       const map = new Map(document.getElementById('map') as HTMLElement, {
         zoom: 11,
-        center: position,
-        mapId: mapId,
+        center: position[0],
+        mapId: 'DEMO_MAP_ID',
       })
 
-      new AdvancedMarkerElement({
-        map: map,
-        position: position,
-        title: 'Auckland',
-      })
+      for (let i = 0; i < position.length; i++) {
+        new AdvancedMarkerElement({
+          map: map,
+          position: position[i],
+          title: 'Auckland',
+        })
+      }
     }
 
     // Google Maps API가 이미 로드되었는지 확인합니다.
@@ -35,8 +50,6 @@ const MapMarker = () => {
       script.async = true
       script.defer = true
       document.head.appendChild(script)
-
-      window.initMap = loadMap // 콜백 함수로 loadMap을 설정합니다.
     }
   }, [])
 
