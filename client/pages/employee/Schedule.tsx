@@ -1,6 +1,6 @@
 import { useGetSchedule } from '../../hooks/useEmployees'
 import { Link, useParams } from 'react-router-dom'
-// import MapMarker from '../../components/MapMarker'
+import MapMarker from '../../components/MapMarker'
 import map from '../../styles/images/map_employee1.png'
 
 function Schedule() {
@@ -20,7 +20,7 @@ function Schedule() {
         <div className="layout-jobList">
           <div className="left-content">
             <h1>Schedule:</h1>
-            {data.map((job) => (
+            {data.map((job: any) => (
               <div className="job-card" key={job.jobId}>
                 <div className="title">{job.title}</div>
                 <div>{job.date}</div>
@@ -32,13 +32,13 @@ function Schedule() {
               </div>
             ))}
           </div>
-          {/* <MapMarker locations={[]} /> */}
-          <img
+          <MapMarker />
+          {/* <img
             id="map"
             style={{ width: '500px', height: '500px' }}
             alt="logo"
             src={map}
-          ></img>
+          ></img> */}
         </div>
       </>
     )

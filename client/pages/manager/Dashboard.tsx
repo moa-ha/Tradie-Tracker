@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import ToggleButton from '../../components/ToggleButton'
 import { useJobs } from '../../hooks/useJobs'
 import DeleteButton from '../../components/Manager/DeleteButton'
-// import MapMarker from '../../components/MapMarker'
+import MapMarker from '../../components/MapMarker'
 import Assign from '../../components/Manager/Assign'
 import map from '../../styles/images/map.png'
 
@@ -43,13 +43,13 @@ function Dashboard() {
               </div>
             ))}
           </div>
-          {/* <MapMarker locations={[]} /> */}
-          <img
+          <MapMarker />
+          {/* <img
             id="map"
             style={{ width: '500px', height: '500px' }}
             alt="logo"
             src={map}
-          ></img>
+          ></img> */}
         </div>
       </>
     )
